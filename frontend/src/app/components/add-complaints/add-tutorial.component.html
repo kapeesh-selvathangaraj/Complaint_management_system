@@ -1,0 +1,40 @@
+<div *ngIf="true" class="form-wrapper">
+  <div class="submit-form">
+
+    <div *ngIf="!submitted" class="form-container">
+
+      <div class="form-group">
+        <h2>COMPLAINT REGISTER</h2>
+        <div class="particles"></div>
+        <label for="title" class="form-label">Title</label>
+        <input
+          type="text"
+          class="form-control"
+          id="title"
+          required
+          [(ngModel)]="tutorial.title"
+          name="title"
+        />
+      </div>
+
+      <div class="form-group">
+        <label for="description" class="form-label">Description</label>
+        <input
+          type="text"
+          class="form-control"
+          id="description"
+          required
+          [(ngModel)]="tutorial.description"
+          name="description"
+        />
+      </div>
+
+      <button (click)="saveTutorial()" class="btn btn-success submit-button">Submit</button>
+    </div>
+
+    <div *ngIf="submitted" class="submitted-container">
+      <h4 class="success-message">Tutorial was submitted successfully!</h4>
+      <button class="btn btn-success add-button" (click)="newTutorial()">Add</button>
+    </div>
+  </div>
+</div>

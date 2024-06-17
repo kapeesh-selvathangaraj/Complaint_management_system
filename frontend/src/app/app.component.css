@@ -1,0 +1,125 @@
+/* Global Styles */
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #121212;
+  color: #ffffff;
+  margin: 0;
+  padding: 0;
+  scroll-behavior: smooth; /* Smooth scroll behavior */
+}
+
+.wrapper {
+  width: 100%;
+  height: 100%;
+  overflow-x: hidden;
+}
+
+/* Navbar Styles */
+.navbar {
+  background-color: #343a40;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease; /* Smooth background color and shadow transition */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+.navbar-brand {
+  font-size: 1.5rem;
+  padding: 10px 20px;
+  transition: color 0.3s ease;
+}
+
+.navbar-brand:hover {
+  color: #007bff;
+}
+
+.navbar-nav .nav-link {
+  padding: 10px 15px;
+  transition: color 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.navbar-nav .nav-link:hover {
+  color: #007bff;
+}
+
+.navbar-nav .nav-link::before {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  width: 0%;
+  height: 2px;
+  background-color: #007bff;
+  transition: width 0.3s ease, left 0.3s ease;
+}
+
+.navbar-nav .nav-link:hover::before {
+  width: 100%;
+  left: 0;
+}
+
+.navbar-toggler {
+  border: none;
+}
+
+.navbar-toggler:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.5);
+}
+
+/* Container Styles */
+.container {
+  padding: 20px;
+}
+
+/* Router Outlet Styles (for the content area) */
+.router-outlet {
+  display: block;
+  transition: opacity 0.3s ease;
+}
+
+.router-outlet.ng-enter,
+.router-outlet.ng-leave {
+  opacity: 0;
+}
+
+.router-outlet.ng-enter-active,
+.router-outlet.ng-leave-active {
+  opacity: 1;
+}
+
+/* Loading Spinner Styles */
+.loading-spinner {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100%;
+}
+
+.spinner-border {
+  width: 3rem;
+  height: 3rem;
+}
+
+/* Advanced Hover and Transition */
+.navbar-nav .nav-link {
+  position: relative;
+  overflow: hidden;
+}
+
+.navbar-nav .nav-link::before {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  width: 0%;
+  height: 2px;
+  background-color: #007bff;
+  transition: width 0.3s ease, left 0.3s ease;
+}
+
+.navbar-nav .nav-link:hover::before {
+  width: 100%;
+  left: 0;
+}
